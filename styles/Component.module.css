@@ -1,0 +1,73 @@
+/* All Components code here */
+.loader {
+  display: inline-block;
+  min-width: 100px;
+  min-height: 100px;
+  margin: auto;
+}
+.loader:after {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 74px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #1db954;
+  border-color: #1db954 transparent #1db954 transparent;
+  animation: animate 1.2s linear infinite;
+}
+.side_menu {
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+  min-width: 250px;
+  background-color: rgba(25, 25, 26, 0.6);
+}
+.menu-header {
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+.menu_button:hover {
+  background: #282828;
+}
+.menu_button:focus {
+  border: none;
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+.menu_button.is_active {
+  background: #282828;
+}
+.display-card {
+  min-width: 350px;
+  width: 350px;
+  min-height: 170px;
+  background-color: rgb(54, 57, 63);
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+}
+.card_media {
+  transform: skew(-20deg);
+  transition: 0.5s all;
+  background-size: cover;
+  object-fit: cover;
+  margin-left: -50px;
+}
+.display-card:hover .card_media {
+  transform: skewX(-10deg);
+  margin-left: -40px;
+}
+.display-card:hover {
+  cursor: pointer;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

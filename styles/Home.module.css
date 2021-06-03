@@ -1,0 +1,34 @@
+.fullScreen {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.hero {
+  background: linear-gradient(to bottom, #1ed760, #1c4d2d);
+  height: 50%;
+  width: 100%;
+  transition: 0.5s;
+  position: fixed;
+  top: 0;
+}
+.buttonstart {
+  height: 35px;
+  border-radius: 20px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  margin: 20px;
+  right: 0;
+  padding: 6px 34px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 1s;
+}
+.buttonstart:hover {
+  background: transparent;
+  border-color: black;
+  border-width: 0.5px;
+  color: white;
+}

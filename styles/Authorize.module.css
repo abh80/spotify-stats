@@ -1,0 +1,86 @@
+.blur {
+  filter: blur(3px);
+}
+.login_container {
+  width: 25%;
+  padding: 20px;
+  top: 15%;
+  height: 75%;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  border-radius: 20px;
+  min-width: 350px;
+  min-height: 400px;
+  color: black;
+  text-align: center;
+}
+.login_container h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.login_container p {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.auth_button {
+  min-width: 250px;
+  background-color: #1db954;
+  font-size: 14px;
+  border-radius: 500px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding-bottom: 18px;
+  padding-top: 16px;
+  padding-right: 40px;
+  padding-left: 40px;
+  position: relative;
+  top: 25%;
+  transition: 0.3s;
+  line-height: 1.2em;
+  display: flex;
+  margin: auto;
+}
+.auth_button:hover {
+  background-color: #1f9147;
+}
+
+.auth_button:focus {
+  border: none;
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+.cancel_button {
+  min-width: 250px;
+  position: relative;
+  top: 25%;
+  margin: auto;
+  margin-top: 20px;
+  color: #616467 !important;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.cancel_button:focus {
+  border: none;
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+.right-to-left {
+  animation: right-l ease-in 0.4s;
+}
+@keyframes right-l {
+  from {
+    margin-left: 100%;
+    opacity: 0;
+  }
+  to {
+    margin-left: 30%;
+    opacity: 1;
+  }
+}
