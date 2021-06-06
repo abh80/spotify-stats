@@ -49,16 +49,13 @@
   overflow: hidden;
 }
 .card_media {
-  transform: skew(-22deg);
+  transform: skew(-12deg);
   transition: 0.3s all;
   background-size: cover;
   object-fit: cover;
-  margin-left: -50px;
+  margin-left: -30px;
 }
-.display-card:hover .card_media {
-  transform: skewX(-10deg);
-  margin-left: -40px;
-}
+
 .display-card:hover {
   cursor: pointer;
 }

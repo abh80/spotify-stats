@@ -5,7 +5,6 @@ export const Spotify_Auth_Url = (
     redirectURI
   )}&response_type=code&scope=${scopes}`;
 export const clientID = "8a0c080885d34f1f8fa4821f6194d9d7";
-export const redirectURI = "http://localhost:3000/callback";
 export const BrandColor = "#1db954";
 export const clientSecret = process.env.secret;
 export var codes = {
@@ -14,3 +13,8 @@ export var codes = {
   User: "curent_user",
   Time: "lastTime",
 };
+export const hostURL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000/"
+    : "https://spotify-stats-omega.vercel.app/";
+export const redirectURI = hostURL + "callback"

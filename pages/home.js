@@ -55,7 +55,7 @@ class Home extends React.Component {
         <Head>
           <title>Home</title>
         </Head>
-        {!this.state.ready ? (
+        {!this.state.ready  ? (
           <Loader source={this} setReduxState={set} />
         ) : (
           this.mainPage()

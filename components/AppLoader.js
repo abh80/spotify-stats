@@ -2,9 +2,10 @@ import * as Constants from "../Constants";
 import React from "react";
 import styles from "../styles/App.module.css";
 import { setState } from "../redux/actions/state";
-
+import * as Util from "../Util";
 export default function loaderPage({ source, setReduxState }) {
   React.useEffect(() => {
+    if (!Util.CheckIFLogged()) return;
     function showError() {
       window.localStorage.clear();
       document.getElementById("error-sec").classList.toggle("show");
