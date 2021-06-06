@@ -33,8 +33,7 @@ public/sw.js.map
 public/workbox-6b19f60b.js.map
 public/workbox-6b19f60b.js
 
-# package lock
-package-lock.json
+
 
 # vercel
 .vercel
