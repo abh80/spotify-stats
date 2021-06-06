@@ -49,8 +49,8 @@
   overflow: hidden;
 }
 .card_media {
-  transform: skew(-20deg);
-  transition: 0.5s all;
+  transform: skew(-22deg);
+  transition: 0.3s all;
   background-size: cover;
   object-fit: cover;
   margin-left: -50px;

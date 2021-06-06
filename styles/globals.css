@@ -5,6 +5,10 @@
 .fullscreen {
   height: 100%;
   width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 html,
 body {
@@ -24,6 +28,11 @@ body {
 
 #__next {
   height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 a {
   color: #1db954;
@@ -80,6 +89,7 @@ a {
 .top-level-error .popup h2 {
   font-weight: 500;
 }
+
 @keyframes LineMove {
   from {
     width: 0px;

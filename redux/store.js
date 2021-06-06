@@ -6,4 +6,6 @@ const middleware = [thunk];
 const make = () =>
   createStore(reducer, compose(applyMiddleware(...middleware)));
 
-export const wrapper = createWrapper(make, { debug: true });
+export const wrapper = createWrapper(make, {
+  debug: process.env.NODE_ENV === "development",
+});

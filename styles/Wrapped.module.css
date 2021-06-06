@@ -1,0 +1,90 @@
+.main-page-hero {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  transform-style: preserve-3d;
+  grid-template-columns: 500px;
+}
+.start {
+  overflow: hidden;
+}
+.main-page-hero .header-text h1 div {
+  display: inline-block;
+  margin-right: 10px;
+}
+.main-page-hero .header-text {
+  transform: translateZ(50px);
+  font-size: 40px;
+  margin: 0.5em;
+  font-weight: bold;
+  overflow: hidden;
+}
+.main-page-hero .secondary-text {
+  overflow: hidden;
+  margin: 1em;
+  transform: translateZ(10px);
+}
+.main-page-hero .secondary-text div {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  overflow: hidden;
+  color: yellow;
+}
+.top-song-card {
+  width: 60%;
+  height: 200px;
+  margin: "auto";
+  min-height: 200px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.background {
+  background-color: #f236a8;
+}
+.spring-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.begin-button {
+  background-color: #1db954;
+  border-color: #1db954;
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+  color: #f236a8;
+  font-weight: 700;
+  font-size: 20px;
+
+  border: none;
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+  transition: 0.3s;
+  margin: auto;
+}
+.begin-button:focus {
+  border: none;
+  outline: 0;
+  outline-style: none;
+  outline-width: 0;
+}
+.begin-button:hover {
+  background-color: #13e65d;
+}
+.button_Wrapper {
+  transform: translateZ(30px);
+  margin: 0.6em;
+  overflow: hidden;
+}
+.circle {
+  border-radius: 50%;
+}

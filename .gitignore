@@ -38,4 +38,9 @@ package-lock.json
 
 # vercel
 .vercel
-/pages/api/user/colors.js
+# Development Files
+/pages/app/wrapped.js
+/components/wrapped/
+
+# Yarn.lock
+yarn.lock
