@@ -5,7 +5,7 @@ import { setState } from "../redux/actions/state";
 import * as Util from "../Util";
 export default function loaderPage({ source, setReduxState }) {
   React.useEffect(() => {
-    if (!Util.CheckIFLogged()) return;
+    if (!Util.CheckIFLogged(window)) return;
     function showError() {
       window.localStorage.clear();
       document.getElementById("error-sec").classList.toggle("show");
