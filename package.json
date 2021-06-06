@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "axios": "^0.21.1",
+    "canvas": "^2.6.1",
     "color-thief-node": "^1.0.4",
     "framer-motion": "^4.1.17",
     "next": "10.2.2",
