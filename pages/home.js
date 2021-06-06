@@ -55,7 +55,7 @@ class Home extends React.Component {
         <Head>
           <title>Home</title>
         </Head>
-        {!this.state.ready  ? (
+        {!this.state.ready ? (
           <Loader source={this} setReduxState={set} />
         ) : (
           this.mainPage()
@@ -106,9 +106,11 @@ class Home extends React.Component {
                 className={styles.font_details}
                 style={{
                   color: state.user.images
-                    ? state.avatarColors[0]
-                      ? state.avatarColors[0][0] > 150
-                        ? "#000"
+                    ? state.avatarColors
+                      ? state.avatarColors[0]
+                        ? state.avatarColors[0][0] > 150
+                          ? "#000"
+                          : "#fff"
                         : "#fff"
                       : "#fff"
                     : "#fff",
@@ -122,7 +124,10 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div style={{ marginTop: "30px", padding: "30px" , display : "flex"}} className = "gap-10">
+          <div
+            style={{ marginTop: "30px", padding: "30px", display: "flex" }}
+            className="gap-10"
+          >
             {!this.state.tracks ? (
               <CardSkeleton />
             ) : (
