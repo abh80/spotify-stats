@@ -69,6 +69,27 @@ class Home extends React.Component {
       state.avatarColors[1] = state.avatarColors[0];
     return (
       <div className="flex fullscreen">
+        <Head>
+          {" "}
+          <meta property="og:title" content="Spotify Stats" />
+          <meta property="og:site_name" content="Spotify Stats" />
+          <meta property="og:url" content={hostURL + "home"} />
+          <meta property="og:theme" content={BrandColor} />
+          <meta
+            property="og:description"
+            content="All your Spotify Statistics at one place!"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:image"
+            content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          />
+          <meta
+            property="og:image:alt"
+            content="Spotify Stats - All your Spotify Statistics at one place!"
+          />
+        </Head>
+
         <Menu />
         <div className="fullscreen">
           <div
