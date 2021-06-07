@@ -60,7 +60,11 @@ export default function Callback() {
                 width: "100px",
                 objectFit: "cover",
               }}
-              src={details.user.images[0].url}
+              src={
+                details.user.images?.length
+                  ? details.user.images[0].url
+                  : "https://www.shazam.com/resources/291229600ef1fb473214ef503895c8185827152f/no-artist-image.jpg"
+              }
               className={alternateStyles["right-to-left"]}
             />
             <div style={{ marginTop: "10px" }}>

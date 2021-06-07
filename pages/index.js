@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
-import { hostURL } from "../Constants";
+import { hostURL , BrandColor } from "../Constants";
 export default function HomePage() {
   useEffect(() => {
     window.onscroll = () => {
@@ -24,6 +24,7 @@ export default function HomePage() {
         <meta property="og:title" content="Spotify Stats" />
         <meta property="og:site_name" content="Spotify Stats" />
         <meta property="og:url" content={hostURL} />
+        <meta property="og:theme" content={BrandColor} />
         <meta
           property="og:description"
           content="All your Spotify Statistics at one place!"
