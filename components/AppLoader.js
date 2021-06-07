@@ -131,7 +131,7 @@ export default function LoaderPage({ source, setReduxState , MetaData = {}}) {
         {" "}
         <title>Spotify Stats - Please Wait</title>
         <meta property="og:title" content={"Spotify Stats - " + MetaData.title} />
-        <meta property="og:site_name" content="Spotify Stats - Top Tracks" />
+        <meta property="og:site_name" content="Spotify Stats" />
         <meta property="og:url" content={Constants.hostURL + MetaData.url} />
         <meta property="og:theme" content={Constants.BrandColor} />
         <meta
