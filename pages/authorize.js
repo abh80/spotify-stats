@@ -16,8 +16,8 @@ export default class extends React.Component {
         <Head>
           <meta property="og:title" content="Spotify Stats" />
           <meta property="og:site_name" content="Spotify Stats" />
-          <meta property="og:url" content={hostURL + "authorize"} />
-          <meta property="og:theme" content={BrandColor} />
+          <meta property="og:url" content={Constants.hostURL + "authorize"} />
+          <meta property="og:theme" content={Constants.BrandColor} />
           <meta
             property="og:description"
             content="All your Spotify Statistics at one place!"

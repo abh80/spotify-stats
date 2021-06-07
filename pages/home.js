@@ -73,8 +73,8 @@ class Home extends React.Component {
           {" "}
           <meta property="og:title" content="Spotify Stats" />
           <meta property="og:site_name" content="Spotify Stats" />
-          <meta property="og:url" content={hostURL + "home"} />
-          <meta property="og:theme" content={BrandColor} />
+          <meta property="og:url" content={Constants.hostURL + "home"} />
+          <meta property="og:theme" content={Constants.BrandColor} />
           <meta
             property="og:description"
             content="All your Spotify Statistics at one place!"

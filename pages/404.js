@@ -1,12 +1,13 @@
 import Head from "next/head";
+import * as Constants from "../Constants";
 export default function NotFound() {
   return (
     <>
       <Head>
         <meta property="og:title" content="Spotify Stats - 404" />
         <meta property="og:site_name" content="Spotify Stats" />
-        <meta property="og:url" content={hostURL} />
-        <meta property="og:theme" content={BrandColor} />
+        <meta property="og:url" content={Constants.hostURL} />
+        <meta property="og:theme" content={Constants.BrandColor} />
         <meta
           property="og:description"
           content="All your Spotify Statistics at one place!"
