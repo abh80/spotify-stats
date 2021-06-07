@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
+import { hostURL } from "../Constants";
 export default function HomePage() {
   useEffect(() => {
     window.onscroll = () => {
@@ -18,11 +18,25 @@ export default function HomePage() {
       }
     };
   });
-  const Router = useRouter();
   return (
     <>
       <Head>
-        <meta></meta>
+        <meta property="og:title" content="Spotify Stats" />
+        <meta property="og:site_name" content="Spotify Stats" />
+        <meta property="og:url" content={hostURL} />
+        <meta
+          property="og:description"
+          content="All your Spotify Statistics at one place!"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+        />
+        <meta
+          property="og:image:alt"
+          content="Spotify Stats - All your Spotify Statistics at one place!"
+        />
         <title>Spotify Stats</title>
       </Head>
       <div className={styles.fullScreen}>
@@ -55,7 +69,7 @@ export default function HomePage() {
               ></img>
             </div>
             <div style={{ top: "15px", position: "relative" }}>
-              <h1 style={{ minWidth: "200px"  }}>Spotify Stats</h1>
+              <h1 style={{ minWidth: "200px" }}>Spotify Stats</h1>
               <p
                 style={{
                   fontSize: "20px",
