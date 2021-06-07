@@ -22,6 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
+        <meta></meta>
         <title>Spotify Stats</title>
       </Head>
       <div className={styles.fullScreen}>
