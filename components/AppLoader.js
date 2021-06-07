@@ -4,7 +4,7 @@ import styles from "../styles/App.module.css";
 import Head from "next/head";
 import * as Util from "../Util";
 import ColorThief from "colorthief";
-export default function LoaderPage({ source, setReduxState }) {
+export default function LoaderPage({ source, setReduxState , MetaData = {}}) {
   React.useEffect(() => {
     if (!Util.CheckIFLogged(window)) return;
     function showError() {
@@ -128,7 +128,25 @@ export default function LoaderPage({ source, setReduxState }) {
   return (
     <div className="fullscreen">
       <Head>
+        {" "}
         <title>Spotify Stats - Please Wait</title>
+        <meta property="og:title" content={"Spotify Stats - " + MetaData.title} />
+        <meta property="og:site_name" content="Spotify Stats - Top Tracks" />
+        <meta property="og:url" content={Constants.hostURL + MetaData.url} />
+        <meta property="og:theme" content={Constants.BrandColor} />
+        <meta
+          property="og:description"
+          content="All your Spotify Statistics at one place!"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+        />
+        <meta
+          property="og:image:alt"
+          content="Spotify Stats - All your Spotify Statistics at one place!"
+        />
       </Head>
       <div className={styles["loading-box"]}>
         <div style={{ height: "50px", width: "100px", margin: "auto" }}>

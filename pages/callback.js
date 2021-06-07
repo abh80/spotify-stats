@@ -5,6 +5,7 @@ import Loader from "../components/loader";
 import { codes } from "../Constants";
 import * as Util from "../Util";
 import { useRouter } from "next/router";
+import Header from "../components/PWAHeader";
 export default function Callback() {
   const [details, setDetails] = React.useState(0);
 
@@ -44,6 +45,7 @@ export default function Callback() {
   }, []);
   return (
     <div className="fullscreen">
+      <Header />
       <Head>
         <title>Welcome</title>
       </Head>

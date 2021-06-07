@@ -7,6 +7,7 @@ import * as Constants from "../../Constants";
 import Menu from "../../components/menu";
 import * as Util from "../../Util";
 import Loader from "../../components/AppLoader";
+import Header from "../../components/PWAHeader";
 class TopTracks extends React.Component {
   constructor(props) {
     super(props);
@@ -35,7 +36,7 @@ class TopTracks extends React.Component {
     return (
       <>
         {!this.state.ready ? (
-          <Loader source={this} setReduxState={set} />
+          <Loader source={this} setReduxState={set} MetaData = {{url : "app/toptracks" , title : "Top Tracks"}}/>
         ) : (
           this.mainPage()
         )}
@@ -45,6 +46,7 @@ class TopTracks extends React.Component {
   mainPage() {
     return (
       <>
+      <Header />
         <Head>
           {" "}
           <title>Spotify Stats - Top Tracks</title>

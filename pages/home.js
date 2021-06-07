@@ -54,7 +54,11 @@ class Home extends React.Component {
     return (
       <>
         {!this.state.ready ? (
-          <Loader source={this} setReduxState={set} />
+          <Loader
+            source={this}
+            setReduxState={set}
+            MetaData={{ url: "home" , title : "Home" }}
+          />
         ) : (
           this.mainPage()
         )}

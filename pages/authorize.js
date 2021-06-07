@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/Authorize.module.css";
 import * as Constants from "../Constants";
 import * as Util from "../Util";
+import Header from "../components/PWAHeader";
 export default class extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +14,7 @@ export default class extends React.Component {
   render() {
     return (
       <>
+      <Header />
         <Head>
           <meta property="og:title" content="Spotify Stats" />
           <meta property="og:site_name" content="Spotify Stats" />

@@ -1,7 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
-import { hostURL , BrandColor } from "../Constants";
+import { hostURL, BrandColor } from "../Constants";
+import Header from "../components/PWAHeader";
 export default function HomePage() {
   useEffect(() => {
     window.onscroll = () => {
@@ -20,6 +21,7 @@ export default function HomePage() {
   });
   return (
     <>
+      <Header />
       <Head>
         <meta property="og:title" content="Spotify Stats" />
         <meta property="og:site_name" content="Spotify Stats" />

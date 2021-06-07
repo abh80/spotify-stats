@@ -1,8 +1,10 @@
 import Head from "next/head";
 import * as Constants from "../Constants";
+import Header from "../components/PWAHeader";
 export default function NotFound() {
   return (
     <>
+    <Header />
       <Head>
         <meta property="og:title" content="Spotify Stats - 404" />
         <meta property="og:site_name" content="Spotify Stats" />
