@@ -10,6 +10,7 @@ import { setState } from "../redux/actions/state";
 import { setTop } from "../redux/actions/apiReducer";
 import CardSkeleton from "../components/skeletons/card";
 import Card from "../components/card";
+import Header from "../components/PWAHeader";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +32,7 @@ class Home extends React.Component {
       const user = JSON.parse(localStorage.getItem(Constants.codes.User)).user;
       this.setState({ user, token, refresher, time });
       this.props?.set({ user, token, refresher, time });
-    }
+    } else if (this.state.ready) this.onReady();
   }
   async onReady() {
     const tracks = await this.props.setTop(
@@ -52,9 +53,6 @@ class Home extends React.Component {
     const { set } = this.props;
     return (
       <>
-        <Head>
-          <title>Home</title>
-        </Head>
         {!this.state.ready ? (
           <Loader source={this} setReduxState={set} />
         ) : (
@@ -69,8 +67,10 @@ class Home extends React.Component {
       state.avatarColors[1] = state.avatarColors[0];
     return (
       <div className="flex fullscreen">
+        <Header />
         <Head>
           {" "}
+          <title>Spotify Stats - Home</title>
           <meta property="og:title" content="Spotify Stats" />
           <meta property="og:site_name" content="Spotify Stats" />
           <meta property="og:url" content={Constants.hostURL + "home"} />

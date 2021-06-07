@@ -14,7 +14,6 @@
     "@types/axios": "^0.14.0",
     "axios": "^0.21.1",
     "canvas": "^2.8.0",
-    "color-thief-node": "^1.0.4",
     "colorthief": "^2.3.2",
     "framer-motion": "^4.1.17",
     "next": "10.2.2",

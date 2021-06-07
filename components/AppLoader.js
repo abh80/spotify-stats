@@ -1,7 +1,7 @@
 import * as Constants from "../Constants";
 import React from "react";
 import styles from "../styles/App.module.css";
-import { setState } from "../redux/actions/state";
+import Head from "next/head";
 import * as Util from "../Util";
 import ColorThief from "colorthief";
 export default function LoaderPage({ source, setReduxState }) {
@@ -127,6 +127,9 @@ export default function LoaderPage({ source, setReduxState }) {
   }, []);
   return (
     <div className="fullscreen">
+      <Head>
+        <title>Spotify Stats - Please Wait</title>
+      </Head>
       <div className={styles["loading-box"]}>
         <div style={{ height: "50px", width: "100px", margin: "auto" }}>
           <img
