@@ -15,12 +15,13 @@
   height: 35px;
   border-radius: 20px;
   width: 150px;
+  min-width: 150px;
   background-color: white;
   color: black;
   position: absolute;
   margin: 20px;
   right: 0;
-  padding: 6px 34px;
+  padding: 6px 30px;
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;

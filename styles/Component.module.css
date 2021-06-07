@@ -52,6 +52,7 @@
   transform: skew(-12deg);
   transition: 0.3s all;
   background-size: cover;
+  min-width: 160px;
   object-fit: cover;
   margin-left: -30px;
 }
