@@ -57,7 +57,7 @@ export default function LoaderPage({ source, setReduxState }) {
                 JSON.stringify(previousCache)
               );
               t.textContent = "Getting User Color";
-              if (res.images) {
+              if (res.images?.length) {
                 const img = new Image();
                 const colorThief = new ColorThief();
                 img.crossOrigin = "Anonymous";
@@ -102,7 +102,7 @@ export default function LoaderPage({ source, setReduxState }) {
         });
     } else {
       t.textContent = "Getting User Color";
-      if (user.images) {
+      if (user.images?.length) {
         let img = new Image();
         let colorThief = new ColorThief();
         img.src = user.images[0].url;
