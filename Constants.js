@@ -16,5 +16,5 @@ export var codes = {
 export const hostURL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000/"
-    : "https://spotify-stats-new.netlify.app/";
+    : "spotify-stats-omega.vercel.app/";
 export const redirectURI = hostURL + "callback"

@@ -3,7 +3,8 @@ import React from "react";
 import styles from "../styles/App.module.css";
 import { setState } from "../redux/actions/state";
 import * as Util from "../Util";
-export default function loaderPage({ source, setReduxState }) {
+import ColorThief from "colorthief";
+export default function LoaderPage({ source, setReduxState }) {
   React.useEffect(() => {
     if (!Util.CheckIFLogged(window)) return;
     function showError() {
@@ -57,32 +58,29 @@ export default function loaderPage({ source, setReduxState }) {
               );
               t.textContent = "Getting User Color";
               if (res.images) {
-                fetch("/api/user/colors", {
-                  method: "post",
-                  body: JSON.stringify({ avatar: res.images[0].url }),
-                })
-                  .then((res) => res.json())
-                  .then(({ colors }) => {
-                    t.textContent = "Almost There";
-                    setTimeout(() => {
-                      source.setState({
-                        ready: true,
-                        avatarColors: colors,
-                        user: previousCache.user,
-                        token: access_token,
-                      });
-                      setReduxState({
-                        ready: true,
-                        avatarColors: colors,
-                        user: previousCache.user,
-                        token: access_token,
-                      });
-                      source.onReady();
-                    }, 2000);
-                  })
-                  .catch(() => {
-                    showError();
+                const img = new Image();
+                const colorThief = new ColorThief();
+                img.crossOrigin = "Anonymous";
+                img.src = res.images[0].url;
+                img.addEventListener("load", function () {
+                  const color = colorThief.getPalette(img, 5);
+                  t.textContent = "Almost There";
+                  setTimeout(() => {
+                    setReduxState({
+                      ready: true,
+                      token: access_token,
+                      user: previousCache.user,
+                      avatarColors: color,
+                    });
+                    source.setState({
+                      ready: true,
+                      token: access_token,
+                      user: previousCache.user,
+                      avatarColors: color,
+                    });
+                    source.onReady();
                   }, 1000);
+                });
               } else {
                 setTimeout(() => {
                   setReduxState({
@@ -105,24 +103,19 @@ export default function loaderPage({ source, setReduxState }) {
     } else {
       t.textContent = "Getting User Color";
       if (user.images) {
-        fetch("/api/user/colors", {
-          method: "post",
-          body: JSON.stringify({ avatar: user.images[0].url }),
-        })
-          .then((res) => res.json())
-          .then(({ colors }) => {
-            t.textContent = "Almost There";
-            setTimeout(() => {
-              source.setState({ ready: true, avatarColors: colors });
-              setReduxState({ ready: true, avatarColors: colors });
-              source.onReady();
-            }, 2000);
-          })
-          .catch(() => {
-            source.setState({ ready: true, avatarColors: null });
-            setReduxState({ ready: true, avatarColors: null });
+        let img = new Image();
+        let colorThief = new ColorThief();
+        img.src = user.images[0].url;
+        img.crossOrigin = "Anonymous";
+        img.addEventListener("load", function () {
+          const color = colorThief.getPalette(img, 5);
+          t.textContent = "Almost There";
+          setTimeout(() => {
+            source.setState({ ready: true, avatarColors: color });
+            setReduxState({ ready: true, avatarColors: color });
             source.onReady();
           }, 1000);
+        });
       } else {
         setTimeout(() => {
           source.setState({ ready: true, avatarColors: null });
