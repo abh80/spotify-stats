@@ -28,7 +28,7 @@ export default function PWAHeader() {
         sizes="32x32"
       />
       <link rel="apple-touch-icon" href="/apple-icon.png"></link>
-      <meta name="theme-color" content="#1db954" />
+      <meta name="theme-color" content="#000000" />
     </Head>
   );
 }
