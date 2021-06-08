@@ -158,7 +158,7 @@ export default function LoaderPage({ source, setReduxState, MetaData = {} }) {
           name="twitter:description"
           content="All your Spotify Statistics at one place!"
         />
-        <meta name="twitter:title" content={"Spotify Stats" + MetaData.title} />
+        <meta name="twitter:title" content={"Spotify Stats - " + MetaData.title} />
         <meta name="twitter:creator" content="@trackerstars" />
         <meta name="twitter:theme-color" content={Constants.BrandColor} />
         <meta name="twitter:url" content={Constants.hostURL + MetaData.url} />
