@@ -4,8 +4,4 @@ module.exports = [
     href: "/home",
   },
   { name: "top tracks", href: "/app/toptracks" },
-  {
-    name: "about",
-    href: "/about",
-  },
 ];

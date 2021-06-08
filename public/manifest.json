@@ -3,7 +3,7 @@
   "background_color": "#000000",
   "display": "fullscreen",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/home",
   "name": "Spotify Stats",
   "short_name": "Spotify Stats",
   "description": "All your Spotify Statistics at one place!",

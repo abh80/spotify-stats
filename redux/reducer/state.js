@@ -8,6 +8,8 @@ const reducer = (
     time: null,
     ready: false,
     avatarColors: null,
+    heroTrackColors: [],
+    heroArtistColors: [],
   },
   action
 ) => {

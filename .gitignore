@@ -30,6 +30,7 @@ yarn-error.log*
 
 # Electron / App files while in beta
 /apps
+pages/app
 
 # service workers
 public/sw.js
