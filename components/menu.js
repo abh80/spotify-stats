@@ -1,9 +1,10 @@
 import styles from "../styles/Component.module.css";
 import MenuButton from "./menu/button";
 import { useRouter } from "next/router";
+import { version } from "../package.json";
 const Items = require("../menuItems");
-
-export default function Menu({ activeKey }) {
+import platform from "platform";
+export default function Menu() {
   const router = useRouter();
   return (
     <div className={styles.side_menu + " fullscreen"}>
@@ -35,6 +36,25 @@ export default function Menu({ activeKey }) {
             />
           );
         })}
+      </div>
+      <div
+        style={{
+          bottom: 0,
+          right: 0,
+          left: 0,
+          position: "absolute",
+          marginBottom: "20px",
+          height: "70px",
+          minHeight: "70px",
+          marginLeft: "20px",
+        }}
+      >
+        <div style={{ fontSize: "16px", fontWeight: 600 }}>V{version}</div>
+        <div style={{ fontSize: "16px", fontWeight: 600 }}>
+          {window.OS
+            ? window.OS
+            : platform.parse(window.navigator.userAgent).os.toString()}
+        </div>
       </div>
     </div>
   );
