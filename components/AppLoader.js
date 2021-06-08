@@ -4,7 +4,7 @@ import styles from "../styles/App.module.css";
 import Head from "next/head";
 import * as Util from "../Util";
 import ColorThief from "colorthief";
-export default function LoaderPage({ source, setReduxState , MetaData = {}}) {
+export default function LoaderPage({ source, setReduxState, MetaData = {} }) {
   React.useEffect(() => {
     if (!Util.CheckIFLogged(window)) return;
     function showError() {
@@ -130,7 +130,10 @@ export default function LoaderPage({ source, setReduxState , MetaData = {}}) {
       <Head>
         {" "}
         <title>Spotify Stats - Please Wait</title>
-        <meta property="og:title" content={"Spotify Stats - " + MetaData.title} />
+        <meta
+          property="og:title"
+          content={"Spotify Stats - " + MetaData.title}
+        />
         <meta property="og:site_name" content="Spotify Stats" />
         <meta property="og:url" content={Constants.hostURL + MetaData.url} />
         <meta property="og:theme" content={Constants.BrandColor} />
@@ -141,11 +144,30 @@ export default function LoaderPage({ source, setReduxState , MetaData = {}}) {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          content={
+            Constants.hostURL +
+            "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          }
         />
         <meta
           property="og:image:alt"
           content="Spotify Stats - All your Spotify Statistics at one place!"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:description"
+          content="All your Spotify Statistics at one place!"
+        />
+        <meta name="twitter:title" content={"Spotify Stats" + MetaData.title} />
+        <meta name="twitter:creator" content="@trackerstars" />
+        <meta name="twitter:theme-color" content={Constants.BrandColor} />
+        <meta name="twitter:url" content={Constants.hostURL + MetaData.url} />
+        <meta
+          name="twitter:image"
+          content={
+            Constants.hostURL +
+            "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          }
         />
       </Head>
       <div className={styles["loading-box"]}>

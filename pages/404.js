@@ -4,9 +4,9 @@ import Header from "../components/PWAHeader";
 export default function NotFound() {
   return (
     <>
-    <Header />
+      <Header />
       <Head>
-        <meta property="og:title" content="Spotify Stats - 404" />
+        <meta property="og:title" content="Spotify Stats - Not Found (404)" />
         <meta property="og:site_name" content="Spotify Stats" />
         <meta property="og:url" content={Constants.hostURL} />
         <meta property="og:theme" content={Constants.BrandColor} />
@@ -17,11 +17,30 @@ export default function NotFound() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          content={
+            Constants.hostURL +
+            "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          }
         />
         <meta
           property="og:image:alt"
           content="Spotify Stats - All your Spotify Statistics at one place!"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:description"
+          content="All your Spotify Statistics at one place!"
+        />
+        <meta name="twitter:title" content="Spotify Stats - Not Found (404)" />
+        <meta name="twitter:creator" content="@trackerstars" />
+        <meta name="twitter:theme-color" content={Constants.BrandColor} />
+        <meta name="twitter:url" content={Constants.hostURL} />
+        <meta
+          name="twitter:image"
+          content={
+            Constants.hostURL +
+            "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+          }
         />
         <title>404 - Not Found</title>
       </Head>

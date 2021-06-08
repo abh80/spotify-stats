@@ -57,7 +57,7 @@ class Home extends React.Component {
           <Loader
             source={this}
             setReduxState={set}
-            MetaData={{ url: "home" , title : "Home" }}
+            MetaData={{ url: "home", title: "Home" }}
           />
         ) : (
           this.mainPage()
@@ -86,11 +86,24 @@ class Home extends React.Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+            content = {Constants.hostURL + "spotify/brand/assets/Spotify_Icon_RGB_Green.png"}
           />
           <meta
             property="og:image:alt"
             content="Spotify Stats - All your Spotify Statistics at one place!"
+          />
+          <meta name = "twitter:card" content = "summary"/>
+          <meta
+            name="twitter:description"
+            content="All your Spotify Statistics at one place!"
+          />
+          <meta name="twitter:title" content="Spotify Stats - Home" />
+          <meta name="twitter:creator" content="@trackerstars" />
+          <meta name="twitter:theme-color" content={Constants.BrandColor} />
+          <meta name="twitter:url" content={Constants.hostURL + "home"} />
+          <meta
+            name="twitter:image"
+            content={Constants.hostURL + "spotify/brand/assets/Spotify_Icon_RGB_Green.png"}
           />
         </Head>
 

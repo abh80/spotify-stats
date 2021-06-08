@@ -36,7 +36,11 @@ class TopTracks extends React.Component {
     return (
       <>
         {!this.state.ready ? (
-          <Loader source={this} setReduxState={set} MetaData = {{url : "app/toptracks" , title : "Top Tracks"}}/>
+          <Loader
+            source={this}
+            setReduxState={set}
+            MetaData={{ url: "app/toptracks", title: "Top Tracks" }}
+          />
         ) : (
           this.mainPage()
         )}
@@ -46,7 +50,7 @@ class TopTracks extends React.Component {
   mainPage() {
     return (
       <>
-      <Header />
+        <Header />
         <Head>
           {" "}
           <title>Spotify Stats - Top Tracks</title>
@@ -64,11 +68,30 @@ class TopTracks extends React.Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="https://spotify-stats-omega.vercel.app/spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+            content={
+              Constants.hostURL +
+              "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+            }
           />
           <meta
             property="og:image:alt"
             content="Spotify Stats - All your Spotify Statistics at one place!"
+          />
+          <meta name="twitter:card" content="summary" />
+          <meta
+            name="twitter:description"
+            content="All your Spotify Statistics at one place!"
+          />
+          <meta name="twitter:title" content="Spotify Stats - Top Tracks" />
+          <meta name="twitter:creator" content="@trackerstars" />
+          <meta name="twitter:theme-color" content={Constants.BrandColor} />
+          <meta name="twitter:url" content={Constants.hostURL + "app/toptracks"} />
+          <meta
+            name="twitter:image"
+            content={
+              Constants.hostURL +
+              "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
+            }
           />
         </Head>
         <div className="fullscreen flex">
