@@ -1,9 +1,30 @@
 .pageHero {
   width: 100%;
   height: 50%;
+  transform-style: preserve-3d;
+  transition: 0.5s;
 }
 .topHero {
   height: 100%;
   width: 100%;
   padding: 40px;
+}
+.fontDetails {
+  margin-top: 3%;
+}
+#font_details_1 {
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.animated-cover-image {
+  animation: animate-cover-image 1s;
+}
+@keyframes animate-cover-image {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

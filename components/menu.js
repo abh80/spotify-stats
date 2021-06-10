@@ -25,7 +25,7 @@ export default function Menu() {
           Spotify Stats
         </p>
       </div>
-      <div className="grid grid-rows-10 gap-5">
+      <div className="grid grid-rows gap-5">
         {Items.map((x, l) => {
           return (
             <MenuButton
