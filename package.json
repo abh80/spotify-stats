@@ -1,6 +1,6 @@
 {
   "name": "spotify-stats",
-  "version": "0.0.2-alpha-rc",
+  "version": "0.1.0-alpha-rc",
   "private": true,
   "author": "Abh80",
   "scripts": {
