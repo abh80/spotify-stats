@@ -51,8 +51,8 @@ export default function Menu() {
       >
         <div style={{ fontSize: "16px", fontWeight: 600 }}>V{version}</div>
         <div style={{ fontSize: "16px", fontWeight: 600 }}>
-          {window.OS
-            ? window.OS
+          {window.os
+            ? window.os
             : platform.parse(window.navigator.userAgent).os.toString()}
         </div>
       </div>

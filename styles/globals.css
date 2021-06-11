@@ -90,7 +90,23 @@ a {
 .top-level-error .popup h2 {
   font-weight: 500;
 }
-
+.electron-drag {
+  -webkit-app-region: drag;
+}
+.window-controls {
+  width: 50px;
+  cursor: pointer;
+}
+.window-controls img {
+  margin: auto;
+  margin-top : 5px;
+}
+.window-controls.red:hover {
+  background-color: red;
+}
+.window-controls.normal:hover {
+  background-color: rgb(32, 30, 30);
+}
 @keyframes LineMove {
   from {
     width: 0px;

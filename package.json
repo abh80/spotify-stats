@@ -1,6 +1,6 @@
 {
   "name": "spotify-stats",
-  "version": "0.1.0-alpha-rc",
+  "version": "0.1.0-alpha-af",
   "private": true,
   "author": "Abh80",
   "scripts": {
@@ -15,6 +15,7 @@
     "axios": "^0.21.1",
     "canvas": "^2.8.0",
     "colorthief": "^2.3.2",
+    "electron": "^13.1.2",
     "framer-motion": "^4.1.17",
     "next": "10.2.2",
     "next-pwa": "^5.2.21",

@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
@@ -29,8 +29,7 @@ yarn-error.log*
 .env.production.local
 
 # Electron / App files while in beta
-/apps
-pages/app
+
 
 # service workers
 public/sw.js
@@ -47,5 +46,5 @@ public/workbox-6b19f60b.js
 /components/wrapped/
 
 # Yarn.lock
-yarn.lock
-yarn-error.log
+**/yarn.lock
+**/yarn-error.log

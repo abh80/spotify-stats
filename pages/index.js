@@ -1,10 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { hostURL, BrandColor } from "../Constants";
 import Header from "../components/PWAHeader";
+import TitleBar from "../components/titlebar";
 export default function HomePage() {
+  const [electron, setElectron] = useState(false);
   useEffect(() => {
+    if (window.electron) setElectron(true);
     window.onscroll = () => {
       if (window.scrollY > 50) {
         document.getElementById("hero").style.height = "25%";
@@ -34,10 +37,7 @@ export default function HomePage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content={
-            hostURL +
-            "spotify/brand/assets/Spotify_Icon_RGB_Green.png"
-          }
+          content={hostURL + "spotify/brand/assets/Spotify_Icon_RGB_Green.png"}
         />
         <meta
           property="og:image:alt"
