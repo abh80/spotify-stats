@@ -33,6 +33,7 @@ class Updater extends EventEmitter {
       url: "https://raw.githubusercontent.com/abh80/spotify-stats/alpha/updates/win32-x64-prod.json",
       autoDownload: true,
       logger: false,
+      checkUpdateOnStart: false,
     });
     if (this.update.options.disabled) {
       Logger.warn(
@@ -57,7 +58,8 @@ class Updater extends EventEmitter {
       Logger.log("Downloading Update...");
       this.window.webContents.send("downloading");
     });
-    this.update.on("error", () => {
+    this.update.on("error", (e) => {
+      Logger.log(e);
       this.emit("update:error");
     });
     this.update.on("update-not-available", () => {

@@ -7,7 +7,7 @@
   "license": "MIT",
   "build": {
     "squirrelWindows": {
-      "iconUrl": "https://github.com/abh80/spotify-stats/blob/alpha/apps/windows/assets/icon-256x256.ico?raw=true"
+      "iconUrl": "https://raw.githubusercontent.com/abh80/spotify-stats/alpha/apps/windows/assets/icon-256x256.ico"
     },
     "win": {
       "icon": "assets/icon-256x256.ico",
@@ -36,6 +36,7 @@
     "electron-simple-updater": "^2.0.10",
     "events": "^3.3.0",
     "platform": "^1.3.6",
+    "electron-log": "^4.3.5",
     "update-electron-app": "^2.0.1"
   }
 }
