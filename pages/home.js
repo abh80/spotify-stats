@@ -39,13 +39,13 @@ class Home extends React.Component {
       this.state.token,
       1,
       "tracks",
-      "short_term"
+      "long_term"
     );
     const artists = await this.props.setTop(
       this.state.token,
       1,
       "artists",
-      "short_term"
+      "long_term"
     );
     this.setState({ tracks: tracks, artists: artists });
   }

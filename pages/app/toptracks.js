@@ -26,7 +26,6 @@ class TopTracks extends React.Component {
       const tracks = await setTop(this.state.token, 50, "tracks", "long_term");
       this.setState({ tracks });
 
-      this.setState({ tracks });
       const colorThief = new ColorTheif();
       let img = new Image();
       img.src = tracks[0].album.images[0].url;
