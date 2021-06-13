@@ -1,17 +1,41 @@
 {
-  "name": "spotifystats-windows",
-  "version": "1.0.0",
+  "name": "spotify-stats",
+  "version": "1.1.0",
   "description": "Windows application built over electron.js of Spotify-Stats",
   "main": "index.js",
   "author": "Abh80",
   "license": "MIT",
+  "build": {
+    "squirrelWindows": {
+      "iconUrl": "https://github.com/abh80/spotify-stats/blob/alpha/apps/windows/assets/icon-256x256.ico?raw=true"
+    },
+    "win": {
+      "icon": "assets/icon-256x256.ico",
+      "target": "squirrel"
+    },
+    "appx": {
+      "identityName": "abh80.SpotifyStats",
+      "publisher": "CN=abh80",
+      "publisherDisplayName": "abh80",
+      "applicationId": "SpotifyStats"
+    }
+  },
   "scripts": {
-    "start": "electron index.js"
+    "start": "electron .",
+    "electron-build": "electron-builder",
+    "electron-publish": "publish publish.config.json"
   },
   "devDependencies": {
-    "electron": "^13.1.2"
+    "electron": "^13.1.2",
+    "electron-builder": "^22.11.7",
+    "electron-builder-squirrel-windows": "^22.11.7",
+    "electron-log": "^4.3.5",
+    "electron-simple-publisher": "^2.0.0"
   },
   "dependencies": {
-    "platform": "^1.3.6"
+    "electron-simple-updater": "^2.0.10",
+    "events": "^3.3.0",
+    "platform": "^1.3.6",
+    "update-electron-app": "^2.0.1"
   }
 }

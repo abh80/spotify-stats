@@ -1,0 +1,52 @@
+html,
+body {
+  color: white;
+  height: 100%;
+  width: 100%;
+  background-color: #23272a;
+  overflow: hidden;
+  font-family: sans-serif;
+  -webkit-app-region: drag;
+  user-select: none;
+  margin: 0;
+}
+.header {
+  text-align: center;
+}
+.loading-box {
+  margin: auto;
+  min-width: 100px;
+  min-height: 150px;
+  width: 300px;
+  position: relative;
+  top: 50%;
+  margin-top: 20px;
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
+  align-content: center;
+}
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+.circle {
+  border-radius: 50%;
+}
+.logo-holder {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+#status-text {
+  text-align: center;
+  font-weight: 600;
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px #1bb451;
+  }
+  100% {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+  }
+}
+
