@@ -1,7 +1,7 @@
 {
   "win32-x64-prod": {
-    "update": "https://github.com/abh80/spotify-stats/releases/download/win32-x64-prod-1.1.0",
-    "install": "https://github.com/abh80/spotify-stats/releases/download/win32-x64-prod-1.1.0/spotify-stats.Setup.1.1.0.exe",
-    "version": "1.1.0"
+    "update": "https://github.com/abh80/spotify-stats/releases/download/win32-x64-prod-1.2.0",
+    "install": "https://github.com/abh80/spotify-stats/releases/download/win32-x64-prod-1.2.0/spotify-stats.Setup.1.2.0.exe",
+    "version": "1.2.0"
   }
 }
